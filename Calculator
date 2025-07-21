@@ -1,0 +1,39 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Calculator {
+    // Events for logging results (optional, for off-chain tracking)
+    event CalculationPerformed(string operation, int256 a, int256 b, int256 result);
+
+    // Addition
+    function add(int256 a, int256 b) public pure returns (int256) {
+        int256 result = a + b;
+        return result;
+    }
+
+    // Subtraction
+    function subtract(int256 a, int256 b) public pure returns (int256) {
+        int256 result = a - b;
+        return result;
+    }
+
+    // Multiplication
+    function multiply(int256 a, int256 b) public pure returns (int256) {
+        int256 result = a * b;
+        return result;
+    }
+
+    // Division
+    function divide(int256 a, int256 b) public pure returns (int256) {
+        require(b != 0, "Division by zero");
+        int256 result = a / b;
+        return result;
+    }
+
+    // Modulo
+    function modulo(int256 a, int256 b) public pure returns (int256) {
+        require(b != 0, "Modulo by zero");
+        int256 result = a % b;
+        return result;
+    }
+}
