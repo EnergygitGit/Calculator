@@ -1,0 +1,4 @@
+   }
+
+    // Modulo
+    function modulo(int256 a, int256 b) public pure returns (int256) {
